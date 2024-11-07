@@ -1,34 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Blog preview card</title>
 
-  Learning
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+      }
 
-  Published 21 Dec 2023
+      main {
+        background-color: #f4d04e;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-  HTML & CSS foundations
+      article {
+        background-color: #ffffff;
+        height: 522px;
+        width: 384px;
+        padding: 24px;
+        box-sizing: border-box;
+        border-radius: 20px;
 
-  These languages are the backbone of every website, defining structure, content, and presentation.
+        @media only screen and (max-width: 375px) {
+          width: 327px;
+          height: 501px;
+        }
 
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        .thumbnail {
+          border-radius: 10px;
+          margin-bottom: 24px;
+        }
+
+        .information {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          margin-bottom: 24px;
+
+          .tag {
+            background-color: #f4d04e;
+            border-radius: 4px;
+            padding: 4px 12px;
+            width: 82px;
+            height: 29px;
+            box-sizing: border-box;
+          }
+
+          .title {
+            font-size: 24px;
+            margin: 0;
+            cursor: pointer;
+          }
+
+          .title:hover {
+            color: #f4d04e;
+            margin: 0;
+          }
+
+          p {
+            margin: 0;
+            line-height: 150%;
+            color: #6b6b6b;
+          }
+        }
+
+        .user-profile {
+          display: flex;
+          gap: 12px;
+          align-items: center;
+
+          img {
+            width: 32px;
+            height: 32px;
+          }
+
+          span {
+            color: #111111;
+            font-size: 14px;
+            font-weight: bold;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <div>
+          <img
+            class="thumbnail"
+            src="assets/images/illustration-article.svg"
+            alt="illustration article"
+            width="100%"
+            height="200"
+          />
+          <div class="information">
+            <span class="tag">Learning</span>
+            <span> Published 21 Dec 2023 </span>
+            <h1 class="title">HTML & CSS foundations</h1>
+            <p>
+              These languages are the backbone of every website, defining
+              structure, content, and presentation.
+            </p>
+          </div>
+          <div class="user-profile">
+            <img src="assets/images/image-avatar.webp" alt="image avatar" />
+            <span>Greg Hooper</span>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
 </html>
